@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper">
+
+  <div class="nav">
+    <a routerLink="/" >Main page</a>
+    <img src="../../assets/images/icon.svg" alt="">
+    <p>Users statistics</p>
+  </div>
+  <p class="title">Users statistics</p>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>IP address</th>
+      <th>Total clicks</th>
+      <th>Total page views</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of usersService.users"
+        (click)="clickUserHandler(user.id)"
+    >
+      <td>{{user.id}}</td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.ip_address}}</td>
+      <td>{{user.total_clicks}}</td>
+      <td>{{user.total_page_views}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <ul class="pagination">
+    <li class="prev">
+      <a *ngIf="currentPage == 1; else activePrevButton">
+        <img src="../../assets/images/arrowLeftNoActive.svg">
+      </a>
+      <ng-template #activePrevButton>
+        <a (click)="clickPrevHandler(currentPage)">
+          <img src="../../assets/images/arrowLeftActive.svg">
+        </a>
+      </ng-template>
+    </li>
+
+    <li *ngFor="let page of usersService.pageNumbers"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]="['/users']" [queryParams]="{page: page}">
+        {{page}}</a>
+    </li>
+
+    <li class="next">
+      <a *ngIf="currentPage == usersService.pageNumbers.length; else activeNextButton" >
+        <img src="../../assets/images/arrowRightNoActive.svg">
+      </a>
+      <ng-template #activeNextButton>
+        <a (click)="clickNextHandler(currentPage)">
+          <img src="../../assets/images/arrowRightActive.svg">
+        </a>
+      </ng-template>
+    </li>
+  </ul>
+
+</div>
+
+<app-footer></app-footer>
+

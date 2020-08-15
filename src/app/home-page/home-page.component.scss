@@ -1,0 +1,184 @@
+.wrapper {
+  .bold {
+    font-weight: bold;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 655px;
+    color: #FFFFFF;
+    background-image: url("../../assets/images/headerImg.svg");
+    .header-left-content{
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+      margin-left: 130px;
+      .brand {
+        font-size: 40px;
+        line-height: 49px;
+      }
+      .header-title {
+        margin-top: 48px;
+        font-size: 48px;
+        line-height: 59px;
+        width: 586px;
+        height: 118px;
+        .bold {
+          font-weight: bold;
+        }
+      }
+      .header-subtitle {
+        margin-top: 24px;
+        width: 580px;
+        height: 56px;
+        font-size: 20px;
+        line-height: 142%;
+      }
+      button {
+        margin-top: 32px;
+        width: 154px;
+        height: 56px;
+        background: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 142%;
+        color: #3A80BA;
+      }
+    }
+    .mobile {
+      margin-top: 72px;
+      margin-right: 209px;
+    }
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-title {
+      margin-top: 16px;
+      width: 580px;
+      height: 78px;
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+    }
+    .main-subtitle {
+      margin-top: 24px;
+      width: 780px;
+      height: 56px;
+      font-size: 20px;
+      line-height: 142%;
+      text-align: center;
+    }
+    .work-info {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 128px;
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        align-items: center;
+        width: 380px;
+        height: 323px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+        border-radius: 32px;
+        img {
+          margin: 48px 137px 40px 137px;
+        }
+        .item-title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+        }
+        .item-text {
+          margin-top: 16px;
+          width: 316px;
+          height: 46px;
+          font-size: 16px;
+          line-height: 142%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .footer {
+    height: 183px;
+    background-image: url("../../assets/images/footerImg.svg");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .footer-input {
+      margin-top: 26px;
+      width: 579px;
+      height: 64px;
+      border: 1px solid #F1F1F1;
+      box-sizing: border-box;
+      border-radius: 10px;
+      display:flex;
+      flex-direction:row;
+      background: #FFFFFF;
+      input {
+        flex-grow:2;
+        border:none;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 162%;
+        display: flex;
+        padding-left: 18px;
+        align-items: center;
+      }
+      input::placeholder {
+        color: #B9B9B9;
+      }
+      input:focus {
+        outline: none;
+      }
+      button {
+        margin: 4px 4px 4px;
+        width: 176px;
+        height: 56px;
+        background: #3A80BA;
+        border-radius: 8px;
+        border:none;
+        font-size: 16px;
+        line-height: 142%;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #FFFFFF;
+      }
+    }
+    .footer-text {
+      color: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .footer-brand {
+        margin: 24px 0px 30px 130px;
+        font-size: 32px;
+        line-height: 39px;
+      }
+      .footer-text-center {
+        margin: 32px 311px 38px 349px;
+        width: 264px;
+        height: 23px;
+        font-size: 16px;
+        line-height: 142%;
+        text-align: center;
+      }
+      .copyrights {
+        margin: 35px 130px 38px 0;
+        width: 147px;
+        height: 23px;
+        font-size: 16px;
+        line-height: 142%;
+      }
+    }
+  }
+}

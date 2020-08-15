@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper">
+
+  <div class="nav">
+    <a routerLink="/" >Main page</a>
+    <img src="../../assets/images/icon.svg" alt="">
+    <a [routerLink]="['/users']" [queryParams]="{page: 1}">Users page</a>
+    <img src="../../assets/images/icon.svg" alt="">
+    <p>User {{userId}}</p>
+  </div>
+
+  <p class="title">User {{userId}}</p>
+
+  <p class="chart-title">Clicks</p>
+  <app-chart *ngIf="!loading"
+             [chartData]="chartService.userClicksArray"
+             [chartLabels]="chartService.userDateArray"
+             [label] ="'clicks'"
+  >
+  </app-chart>
+
+  <p class="chart-title">Views</p>
+  <app-chart *ngIf="!loading"
+             [chartData]="chartService.userViewsArray"
+             [chartLabels]="chartService.userDateArray"
+             [label] ="'views'"
+  >
+  </app-chart>
+
+</div>
+
+<app-footer></app-footer>
